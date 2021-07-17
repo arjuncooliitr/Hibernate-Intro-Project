@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mysql</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Arjun@263</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<mapping resource="employee.hbm.xml"/>
+		<mapping class="com.annot.Employee"/>
+	    <mapping class="com.one_to_one.Person_One_to_One" />
+		<mapping class="com.one_to_one.Address_One_to_One" /> 
+		<mapping class="com.One_to_Many.Person_one_to_many" />
+		<mapping class="com.One_to_Many.Address_one_to_many" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
